@@ -1,0 +1,21 @@
+class Solution:
+    def halvesAreAlike(self, s: str) -> bool:
+        n = len(s)
+        a = s[:int(n/2)]
+        b = s[int(n/2):]
+        sum1 = 0
+        sum2 = 0
+        vowels = "aeiouAEIOU"
+        for i in a:
+            if i in vowels:
+                sum1 = sum1 + 1
+
+        for i in b:
+            if i in vowels:
+                sum2 = sum2 + 1
+
+        if sum1 == sum2:
+            return 1 == 1
+        
+        else:
+            return 1 != 1
