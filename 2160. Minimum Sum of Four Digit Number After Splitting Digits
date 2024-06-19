@@ -1,0 +1,9 @@
+class Solution:
+    def minimumSum(self, num: int) -> int:
+        s = str(num)
+        l = list(s)
+        l2 = sorted(l)
+        a = int(str(l2[0])+str(l2[2]))
+        b = int(str(l2[1])+str(l2[3]))
+
+        return a + b
