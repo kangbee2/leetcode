@@ -1,0 +1,8 @@
+class Solution:
+    def checkString(self, s: str) -> bool:
+        l1 = list(s)
+        l2 = sorted(l1)
+        if l1 == l2:
+            return 1 == 1
+        else:
+            return 1 != 1
