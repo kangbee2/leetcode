@@ -1,0 +1,9 @@
+class Solution:
+    def countKeyChanges(self, s: str) -> int:
+        sum = 0
+        a = s.lower()
+        for i in range(0, len(a)-1):
+            if a[i] != a[i+1]:
+                sum = sum +1
+
+        return sum
