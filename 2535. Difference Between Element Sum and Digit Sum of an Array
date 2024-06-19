@@ -1,0 +1,12 @@
+class Solution:
+    def differenceOfSum(self, nums: List[int]) -> int:
+        elt_sum = 0
+        for i in range (0, len(nums)):
+            elt_sum = elt_sum + nums[i]
+
+        dig_sum = 0
+        for i in range (0, len(nums)):
+            for j in range (0, len(str(nums[i]))):
+                dig_sum = dig_sum + int(str(nums[i])[j])
+
+        return abs(elt_sum - dig_sum)
