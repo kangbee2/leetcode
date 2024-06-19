@@ -1,0 +1,7 @@
+class Solution:
+    def isAcronym(self, words: List[str], s: str) -> bool:
+        l = []
+        for i in words:
+            l.append(i[0])
+
+        return s == "".join(l)
