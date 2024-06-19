@@ -1,0 +1,12 @@
+class Solution:
+    def maxFrequencyElements(self, nums: List[int]) -> int:
+        l = []
+        for i in range(0, len(nums)):
+            l.append(nums.count(nums[i]))
+        
+        sum = 0
+        for i in range(0, len(l)):
+            if l[i] == max(l):
+                sum += 1
+        
+        return sum
