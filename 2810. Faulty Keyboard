@@ -1,0 +1,11 @@
+class Solution:
+    def finalString(self, s: str) -> str:
+        a = ""
+        for j in s:
+            if j != "i":
+                a = a + f"{j}"
+            else:
+                r = reversed(a)
+                a = "".join(r)
+
+        return a
