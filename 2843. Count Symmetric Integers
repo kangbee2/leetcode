@@ -1,0 +1,14 @@
+class Solution:
+    def countSymmetricIntegers(self, low: int, high: int) -> int:
+        s2 = 0
+        for i in range(low, high+1):
+            s = str(i)
+            l = list(s)
+            for i in range(0, len(l)):
+                l[i] = int(l[i])
+            if len(l) % 2 == 0:
+                if sum(l[:int(len(l)/2)]) == sum(l[int(len(l)/2):]):
+                    s2 += 1
+
+        
+        return s2
