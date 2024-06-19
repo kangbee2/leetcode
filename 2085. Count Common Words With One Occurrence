@@ -1,0 +1,8 @@
+class Solution:
+    def countWords(self, words1: List[str], words2: List[str]) -> int:
+        sum = 0
+        for i in range(0, len(words1)):
+            if words1.count(words1[i]) == 1 and words2.count(words1[i]) == 1:
+                sum += 1
+
+        return sum
