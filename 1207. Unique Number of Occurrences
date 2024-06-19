@@ -1,0 +1,19 @@
+class Solution:
+    def uniqueOccurrences(self, arr: List[int]) -> bool:
+        lst = []
+        s = set(arr)
+        l = list(s)
+        for i in l:
+            lst.append(arr.count(i))
+
+        sum = 0
+        for i in range(0, len(lst)):
+            if lst[i] in lst[:i] + lst[i+1:]:
+                sum = sum + 1
+        
+        if sum != 0:
+            return 1 != 1
+        else:
+            return 1 == 1
+            
+            
