@@ -1,0 +1,12 @@
+class Solution:
+    def numberOfLines(self, widths: List[int], s: str) -> List[int]:
+        alph = "abcdefghijklmnopqrstuvwxyz"
+        sum = 0
+        numl = 1
+        for i in range(0, len(s)):
+            sum = sum + widths[alph.index(s[i])]
+            if sum > 100:
+                numl = numl + 1
+                sum = widths[alph.index(s[i])]
+        
+        return [numl, sum]
