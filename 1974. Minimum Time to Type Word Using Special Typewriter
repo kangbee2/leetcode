@@ -1,0 +1,27 @@
+class Solution:
+    def minTimeToType(self, word: str) -> int:
+        alph = "abcdefghijklmnopqrstuvwxyz"
+        sum = 0
+        if word[0] != "a":
+            a = alph.index(word[0])
+            b = len(alph) - a
+            if a < b:
+                sum = sum + a + 1
+            else:
+                sum = sum + b + 1
+        else:
+            sum += 1
+
+        for i in range(1, len(word)):
+            if word[i] != word[i-1]:
+                a = abs(alph.index(word[i]) - alph.index(word[i-1]))
+                b = len(alph) - a
+                if a < b:
+                    sum = sum + a + 1
+                else:
+                    sum = sum + b + 1
+            
+            else:
+                sum += 1
+            
+        return sum
