@@ -1,0 +1,12 @@
+class Solution:
+    def uniqueMorseRepresentations(self, words: List[str]) -> int:
+        alph = "abcdefghijklmnopqrstuvwxyz"
+        morsecode = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
+        lst = []
+        for i in words:
+            for j in i:
+                i = i.replace(j, morsecode[alph.index(j)])
+            lst.append(i)
+
+        s = set(lst)
+        return len(s)
