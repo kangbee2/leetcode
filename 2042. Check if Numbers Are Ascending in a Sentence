@@ -1,0 +1,24 @@
+class Solution:
+    def areNumbersAscending(self, s: str) -> bool:
+        alph = "abcdefghijklmnopqrstuvwxyz"
+        l = s.split()
+        l2 = []
+        for i in range(0, len(l)):
+            for j in range(0, len(l[i])):
+                sum = 0
+                if l[i][j] in alph:
+                    sum = sum + 1
+            if sum == 0:
+                l2.append(int(l[i]))
+
+        l3 = sorted(l2)
+        if l2 != l3:
+            return 1 != 1
+        
+        for i in l2:
+            if l2.count(i) != 1:
+                return 1!= 1
+
+
+        else:
+            return 1 != 0
