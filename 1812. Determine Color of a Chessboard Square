@@ -1,0 +1,10 @@
+class Solution:
+    def squareIsWhite(self, coordinates: str) -> bool:
+        s = "abcdefgh"
+        if s.index(coordinates[0]) % 2 == 0 and int(coordinates[1]) % 2 == 0:
+            return 1 == 1
+        elif s.index(coordinates[0]) % 2 != 0 and int(coordinates[1]) % 2 != 0:
+            return 1 == 1
+        
+        else:
+            return 1 != 1
