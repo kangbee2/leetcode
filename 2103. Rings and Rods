@@ -1,0 +1,9 @@
+class Solution:
+    def countPoints(self, rings: str) -> int:
+        sum = 0
+        for i in range(0, 10):
+            s = str(i)
+            if "R"+ s in rings and "G"+ s in rings and "B"+ s in rings:
+                sum += 1
+        
+        return sum
