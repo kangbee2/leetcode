@@ -1,0 +1,15 @@
+class Solution:
+    def decodeMessage(self, key: str, message: str) -> str:
+        alph = "abcdefghijklmnopqrstuvwxyz"
+        l = []
+        for i in key:
+            if i !=  " ":
+                if i not in l:
+                    l.append(i)
+
+        m = list(message)
+        for i in range (0, len(m)):
+            if m[i] != " ":
+                m[i] = alph[l.index(m[i])]
+
+        return "".join(m)
