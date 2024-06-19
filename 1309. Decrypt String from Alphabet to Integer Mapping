@@ -1,0 +1,15 @@
+class Solution:
+    def freqAlphabets(self, s: str) -> str:
+        alph = "aabcdefghijklmnopqrstuvwxyz"
+        l = []
+        for i in range(0, len(s)):
+            if i+2 <= len(s)-1 and s[i+2] == "#":
+                l.append(alph[int(s[i:i+2])])
+            elif i != len(s)-1:
+                if s[i+1] != "#" and s[i] != "#":
+                    l.append(alph[int(s[i])])
+            elif i == len(s)-1:
+                if s[i] != "#":
+                    l.append(alph[int(s[i])])
+        
+        return "".join(l)
