@@ -1,0 +1,11 @@
+class Solution:
+    def deleteGreatestValue(self, grid: List[List[int]]) -> int:
+        sum = 0
+        for j in range(0, len(grid[0])):
+            l = []
+            for i in grid:
+                l.append(max(i))
+                i.remove(max(i))
+            sum = sum + max(l)
+        
+        return sum
