@@ -1,0 +1,9 @@
+class Solution:
+    def cellsInRange(self, s: str) -> List[str]:
+        alph = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        l = []
+        for i in range(alph.index(s[0]), alph.index(s[3])+1):
+            for j in range(int(s[1]), int(s[4])+1):
+                l.append(alph[i] + f"{j}")
+        
+        return l
