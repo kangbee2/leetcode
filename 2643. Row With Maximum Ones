@@ -1,0 +1,9 @@
+class Solution:
+    def rowAndMaximumOnes(self, mat: List[List[int]]) -> List[int]:
+        l = []
+        for i in range(0, len(mat)):
+            s = mat[i].count(1)
+            l.append(s)
+        
+        a = l.index(max(l))
+        return [a, max(l)]
