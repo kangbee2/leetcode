@@ -1,0 +1,16 @@
+class Solution:
+    def maximumValue(self, strs: List[str]) -> int:
+        l = []
+        alph = "abcdefghijklmnopqrstuvwxyz"
+        for i in strs:
+            sum = 0
+            for j in range(0, len(i)):
+                if i[j] in alph:
+                    sum = sum + 1
+            
+            if sum == 0:
+                l.append(int(i))
+            else:
+                l.append(len(i))
+
+        return max(l)
