@@ -1,0 +1,14 @@
+class Solution:
+    def digitCount(self, num: str) -> bool:
+        sum = 0
+        l = list(num)
+        for i in range(0, len(l)):
+            l[i] = int(l[i])
+        for i in range(0, len(l)):
+            if l.count(i) != l[i]:
+                sum += 1
+        
+        if sum == 0:
+            return 0 == 0
+        else:
+            return 0 != 0
