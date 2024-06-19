@@ -1,0 +1,11 @@
+class Solution:
+    def firstPalindrome(self, words: List[str]) -> str:
+        sum = 0
+        for i in words:
+            r = reversed(i)
+            rev = "".join(r)
+            if i == rev:
+                return i
+                sum = sum + 1
+        if sum == 0:
+            return ""
