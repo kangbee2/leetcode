@@ -1,0 +1,13 @@
+class Solution:
+    def minDeletionSize(self, strs: List[str]) -> int:
+        alph = "abcdefghijklmnopqrstuvwxyz"
+        sum = 0
+        for i in range(0, len(strs[0])):
+            l = []
+            for j in range(0, len(strs)):
+                l.append(strs[j][i])
+            l2 = sorted(l)
+            if l == l2:
+                sum += 1
+        
+        return len(strs[0]) - sum
