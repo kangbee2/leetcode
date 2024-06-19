@@ -1,0 +1,8 @@
+class Solution:
+    def balancedStringSplit(self, s: str) -> int:
+        sum = 0
+        for i in range(0, len(s)):
+            if s[:i+1].count("R") == s[:i+1].count("L"):
+                sum += 1
+
+        return sum
