@@ -1,0 +1,12 @@
+class Solution:
+    def countAsterisks(self, s: str) -> int:
+        a = 0
+        sum = 0
+        for i in s:
+            if i == "|":
+                a = a + 1
+            
+            elif i == "*" and a % 2 == 0:
+                sum = sum + 1
+
+        return sum
