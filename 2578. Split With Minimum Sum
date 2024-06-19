@@ -1,0 +1,11 @@
+class Solution:
+    def splitNum(self, num: int) -> int:
+        l = sorted(list(str(num)))
+        if len(l) % 2 == 0:
+            a = int(''.join((l[:len(l):2])))
+            b = int(''.join((l[1:len(l):2])))
+        else:
+            a = int(''.join((l[:len(l)+1:2])))
+            b = int(''.join((l[1:len(l)+1:2])))
+            
+        return a + b
