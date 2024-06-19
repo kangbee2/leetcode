@@ -1,0 +1,20 @@
+class Solution:
+    def finalPrices(self, prices: List[int]) -> List[int]:
+        l = []
+        for i in range(0, len(prices)):
+            sum = 0
+            for j in range(i+1, len(prices)):
+                if prices[j] <= prices[i]:
+                    sum = sum + 1
+                    l.append(prices[j])
+                    break
+
+            if sum == 0:
+                l.append(0)
+            
+        l2 = []
+        for i in range(0, len(prices)):
+            l2.append(prices[i] - l[i])
+
+        return l2
+                
