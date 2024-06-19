@@ -1,0 +1,12 @@
+class Solution:
+    def sumOfTheDigitsOfHarshadNumber(self, x: int) -> int:
+        s = str(x)
+        l = list(s)
+        sum = 0
+        for i in range(0, len(l)):
+            sum = sum + int(l[i])
+        
+        if x % sum == 0:
+            return sum
+        else:
+            return -1
