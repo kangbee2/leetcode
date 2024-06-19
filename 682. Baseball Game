@@ -1,0 +1,14 @@
+class Solution:
+    def calPoints(self, operations: List[str]) -> int:
+        l = []
+        for i in range(0, len(operations)):
+            if operations[i] not in ["+", "D", "C"]:
+                l.append(int(operations[i]))
+            elif operations[i] == "+":
+                l.append(l[-1] + l[-2])
+            elif operations[i] == "D":
+                l.append(2 * l[-1])
+            elif operations[i] == "C":
+                l = l[:-1]
+            
+        return sum(l)
