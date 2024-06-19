@@ -1,0 +1,16 @@
+class Solution:
+    def checkDistances(self, s: str, distance: List[int]) -> bool:
+        alph = "abcdefghijklmnopqrstuvwxyz"
+        l = list(s)
+        sum = 0
+        for i in range(0, len(l)-1):
+            l2 = list(s)
+            l2[i] = "1"
+            if i < l2.index(l[i]):
+                if l2.index(l[i]) - i -1 != distance[alph.index(l[i])]:
+                    sum += 1
+        
+        if sum == 0:
+            return 1 == 1
+        else:
+            return 1 != 1
