@@ -1,0 +1,14 @@
+class Solution:
+    def canBeTypedWords(self, text: str, brokenLetters: str) -> int:
+        l = text.split()
+        a = 0
+        for i in range(0, len(l)):
+            sum = 0
+            for j in range(0, len(brokenLetters)):
+                if brokenLetters[j] in list(l[i]):
+                    sum += 1
+            
+            if sum == 0:
+                a += 1
+        
+        return a
