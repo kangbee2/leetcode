@@ -1,0 +1,11 @@
+class Solution:
+    def sumOfEncryptedInt(self, nums: List[int]) -> int:
+        l = []
+        for i in nums:
+            if len(str(i)) == 1:
+                l.append(i)
+            
+            else:
+                l.append(int(max(list(str(i)))*len(str(i))))
+        
+        return sum(l)
