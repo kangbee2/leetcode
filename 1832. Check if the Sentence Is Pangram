@@ -1,0 +1,12 @@
+class Solution:
+    def checkIfPangram(self, sentence: str) -> bool:
+        alph = "abcdefghijklmnopqrstuvwxyz"
+        sum = 0
+        for i in alph:
+            if i in sentence:
+                sum = sum + 1
+        
+        if sum == 26:
+            return 1 == 1
+        else:
+            return 1 != 1
