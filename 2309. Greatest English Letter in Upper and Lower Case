@@ -1,0 +1,15 @@
+class Solution:
+    def greatestLetter(self, s: str) -> str:
+        l = []
+        l1 = list(s)
+        for i in range(0, len(l1)):
+            if l1[i] == l1[i].upper():
+                if l1[i].lower() in l1:
+                    l.append(l1[i])
+        
+        l2 = sorted(l)
+
+        if l2 == []:
+            return ""
+        else:
+            return l2[-1]
