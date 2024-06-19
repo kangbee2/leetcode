@@ -1,0 +1,7 @@
+class Solution:
+    def findPermutationDifference(self, s: str, t: str) -> int:
+        l = []
+        for i in range(0, len(s)):
+            l.append(abs(s.index(s[i]) - t.index(s[i])))
+        
+        return sum(l)
