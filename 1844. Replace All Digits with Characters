@@ -1,0 +1,11 @@
+class Solution:
+    def replaceDigits(self, s: str) -> str:
+        alph = "abcdefghijklmnopqrstuvwxyz"
+        l = list(s)
+        for i in range(0, len(l)):
+            if i % 2 == 1:
+                a = alph[alph.index(l[i-1])+int(l[i])]
+                l[i] = a
+        
+        s2 = "".join(l)
+        return s2
