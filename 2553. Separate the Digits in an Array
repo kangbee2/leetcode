@@ -1,0 +1,12 @@
+class Solution:
+    def separateDigits(self, nums: List[int]) -> List[int]:
+        l = []
+        for i in range(0, len(nums)):
+            s = str(nums[i])
+            l2 = list(s)
+            l = l + l2
+
+        for i in range(0, len(l)):
+            l[i] = int(l[i])
+            
+        return l
