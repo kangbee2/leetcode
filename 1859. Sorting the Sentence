@@ -1,0 +1,10 @@
+class Solution:
+    def sortSentence(self, s: str) -> str:
+        l = s.split()
+        lst = []
+        for j in range(1, len(l)+1):
+            for i in l:
+                if f"{j}" in list(i):
+                    lst.append(i[0:-1])
+
+        return " ".join(lst)
