@@ -1,0 +1,17 @@
+class Solution:
+    def destCity(self, paths: List[List[str]]) -> str:
+        l = []
+        for i in range(0, len(paths)):
+            if paths[i][0] not in l:
+                l.append(paths[i][0])
+            if paths[i][1] not in l:
+                l.append(paths[i][1])
+
+        for i in range(0, len(l)):
+            sum = 0
+            for j in range(0, len(paths)):
+                if paths[j][0] == l[i]:
+                    sum += 1
+
+            if sum == 0:
+                return l[i]
