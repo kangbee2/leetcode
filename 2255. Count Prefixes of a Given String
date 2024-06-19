@@ -1,0 +1,16 @@
+class Solution:
+    def countPrefixes(self, words: List[str], s: str) -> int:
+        sum2 = 0
+        for i in words:
+            sum = 0
+            if len(i) <= len(s):
+                for j in range(0, len(i)):
+                    if i[j] != s[j]:
+                        sum = sum + 1
+            else:
+                sum = sum + 1
+
+            if sum == 0:
+                sum2 = sum2 + 1
+
+        return sum2
