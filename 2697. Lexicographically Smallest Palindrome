@@ -1,0 +1,14 @@
+class Solution:
+    def makeSmallestPalindrome(self, s: str) -> str:
+        alph = "abcdefghijklmnopqrstuvwxyz"
+        l = list(s)
+        for i in range(0, len(l)):
+            if alph.index(l[i]) <= alph.index(l[-(i+1)]):
+                l[-(i+1)] = l[i]
+            else:
+                l[i] = l[-(i+1)]
+
+
+        return "".join(l)
+
+        
