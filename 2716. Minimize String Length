@@ -1,0 +1,6 @@
+class Solution:
+    def minimizedStringLength(self, s: str) -> int:
+        l = list(s)
+        st = set(l)
+        l2 = list(st)
+        return len(l2)
