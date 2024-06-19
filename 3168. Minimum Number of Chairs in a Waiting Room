@@ -1,0 +1,12 @@
+class Solution:
+    def minimumChairs(self, s: str) -> int:
+        l = []
+        sum = 0
+        for i in range(0, len(s)):
+            if s[i] == "E":
+                sum = sum + 1
+            else:
+                sum = sum - 1
+            l.append(sum)
+        
+        return max(l)
