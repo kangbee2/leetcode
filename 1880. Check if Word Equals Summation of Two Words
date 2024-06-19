@@ -1,0 +1,33 @@
+class Solution:
+    def isSumEqual(self, firstWord: str, secondWord: str, targetWord: str) -> bool:
+        alph = "abcdefghijklmnopqrstuvwxyz"
+        l1 = []
+        for i in range(0, len(firstWord)):
+            l1.append(alph.index(firstWord[i]))
+        
+        for i in range(0, len(l1)):
+            l1[i] = str(l1[i])
+        s1 = "".join(l1)
+
+        l2 = []
+        for i in range(0, len(secondWord)):
+            l2.append(alph.index(secondWord[i]))
+
+        for i in range(0, len(l2)):
+            l2[i] = str(l2[i])
+        s2 = "".join(l2)
+
+        a = int(s1) + int(s2)
+
+        l3 = []
+        for i in range(0, len(targetWord)):
+            l3.append(alph.index(targetWord[i]))
+            
+        for i in range(0, len(l3)):
+            l3[i] = str(l3[i])
+        s3 = "".join(l3)
+
+        if int(s3) == a:
+            return 1 == 1
+        else:
+            return 1 != 1
