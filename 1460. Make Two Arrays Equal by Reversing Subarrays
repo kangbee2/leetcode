@@ -1,0 +1,10 @@
+class Solution:
+    def canBeEqual(self, target: List[int], arr: List[int]) -> bool:
+        l1 = sorted(target)
+        l2 = sorted(arr)
+        
+        if l1 == l2:
+            return 1 == 1
+
+        else:
+            return 1 != 1
