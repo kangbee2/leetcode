@@ -1,0 +1,10 @@
+class Solution:
+    def subtractProductAndSum(self, n: int) -> int:
+        digits = [int(digit) for digit in str(n)]
+        product = 1
+        sum_of_digits = 0
+        for digit in digits:
+            product *= digit
+            sum_of_digits += digit
+            
+        return product - sum_of_digits
