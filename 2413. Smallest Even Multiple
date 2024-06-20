@@ -1,0 +1,19 @@
+class Solution:
+    def gcd(self, a, b):
+        # Euclidean algorithm to find the greatest common divisor
+        while b:
+            a, b = b, a % b
+        return a
+
+    def lcm(self, a, b):
+        # LCM = (a * b) / GCD(a, b)
+        return (a * b) // self.gcd(a, b)
+
+    def smallestEvenMultiple(self, n: int) -> int:
+        # LCM of 2 and n
+        return self.lcm(2, n)
+
+# Test cases
+solution = Solution()
+print(solution.smallestEvenMultiple(5))  # Output: 10
+print(solution.smallestEvenMultiple(6))  # Output: 6
