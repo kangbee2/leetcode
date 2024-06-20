@@ -1,0 +1,9 @@
+class Solution:
+    def countCompleteDayPairs(self, hours: List[int]) -> int:
+        sum = 0
+        for i in range(0, len(hours)):
+            for j in range(i+1, len(hours)):
+                if (hours[i] + hours[j]) % 24 == 0:
+                    sum += 1
+
+        return sum
