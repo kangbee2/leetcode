@@ -1,0 +1,14 @@
+class Solution:
+    def maximum69Number (self, num: int) -> int:
+        digits = [int(digit) for digit in str(num)]
+        if 6 in digits:
+            i = digits.index(6)
+            digits[i] = 9
+            sum = ""
+            for i in digits:
+                sum = str(sum) + str(i)
+            
+            return int(sum)
+
+        else:
+            return num
