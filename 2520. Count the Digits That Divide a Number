@@ -1,0 +1,8 @@
+class Solution:
+    def countDigits(self, num: int) -> int:
+        digits = [int(digit) for digit in str(num)]
+        sum = 0
+        for i in digits:
+            if num % i == 0:
+                sum += 1
+        return sum
